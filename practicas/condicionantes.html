@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    // no es importante esta linea solo ejecuta el metodo function cuando carga la pagina
+    onload = mi_funcion_main();
+    // creacion de metodo propio donde se ejecutara los ejercicios asignados
+    function mi_funcion_main() {
+        //================================== Condiciones ===============================
+
+        var num = 8;
+        if (num < 10) {
+            document.write("El número es menor a 10 </br>");
+        }
+        if (num >= 10) {
+            document.write("El número es igual o mayor a 10 </br>");
+        }
+
+        //CICLOS
+        document.write("CICLOS  </br>");
+        var i = 0;
+        while (i < 5) {
+            document.write("Hola mundo while </br>");
+            i = i + 1;
+        }
+
+        for (var i=0; i < 5; i++) {
+            document.write("Hola mundo for </br>");
+        }
+        
+        var array=['juan','elva']
+
+        array.forEach(element => {
+            document.write(element," </br>");
+        });
+        
+        
+    }
+</script>
+<body>
+    
+</body>
+</html>
