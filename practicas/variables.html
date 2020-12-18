@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tipos de variables</title>
+</head>
+<script>
+    // no es importante esta linea solo ejecuta el metodo function cuando carga la pagina
+    onload = mi_funcion_main();
+    // creacion de metodo propio donde se ejecutara los ejercicios asignados
+    function mi_funcion_main() {
+        //================================== Tipos de variables ===============================
+        
+        // Numéricas
+        var iva = 16;        // variable tipo entero
+        var total = 234.65;  // variable tipo decimal
+        
+        //Cadenas de texto
+        var mensaje = "Bienvenido a nuestro sitio web";
+        var nombreProducto = 'Producto ABC';
+        var letraSeleccionada = 'c';
+
+        // De esta forma, el ejemplo anterior que contenía comillas simples
+        // y dobles dentro del texto se puede rehacer de la siguiente forma:
+
+        var texto1 = 'Una frase con \'comillas simples\' dentro';
+        var texto2 = "Una frase con \"comillas dobles\" dentro";
+
+        // Arrays de strings
+        var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+        // Arrays de variables mixtas (enteros, decimales, strings)
+        var diasYnumeros = [0, "Martes", 2, "Jueves", 2.1, "Sábado", 2.3];
+
+        // document.write("lo que se imprimira en la pagina") ====> nueva linea para imprimir en la pagina en blanco
+        // ==============================================   impresion de datos en la pagina==================================
+
+        document.write("Tipos de variables </br>");
+        document.write("Numericas </br>");
+        document.write("iva = " + iva,"</br>");
+        document.write("total = " + total,"</br>");
+        document.write("Cadenas de texto </br>");
+        document.write("mensaje = " + mensaje,"</br>");
+        document.write("nombreProducto = " + nombreProducto,"</br>");
+        document.write("letraSeleccionada = " + letraSeleccionada,"</br>");
+        document.write("texto1 = " + texto1,"</br>");
+        document.write("texto2 = " + texto2,"</br>");
+        document.write("Arrays de strings </br>");
+        dias.forEach(element => {
+            document.write(element + " </br>");
+        });
+        diasYnumeros.forEach(element => {
+            document.write(element + " </br>");
+        });
+
+    }
+</script>
+<body>
+    
+</body>
+</html>
