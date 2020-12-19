@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    // no es importante esta linea solo ejecuta el metodo function cuando carga la pagina
+    onload = mi_funcion_main();
+
+    // creacion de metodo propio donde se ejecutara los ejercicios asignados
+    function mi_funcion_main() {
+        //================================== METODOS PROPIOS DE JAVASCRIPT ===============================
+        
+        // modos de concadenar cadenas
+        // 1.- modo clasico 
+        var nombre = "Elva";
+        var apellido = "Fernandez";
+        var edad = "26";
+        document.write("Pasado el tiempo, "+nombre+" "+apellido+" va a tener "+edad + "</br>");
+        // 2.- modo avanzado 
+        document.write(`Pasado el tiempo, ${nombre} ${apellido} va a tener ${edad} </br>`);
+
+
+
+        // creacion de objetos ==> los objetos son clases genericas... es decir se pone el valor que decee
+        var persona = new Object();
+        persona.edad = 26;
+        persona.nombre = 'Elva';
+        persona.altura = 1.7;
+
+        document.write(`Nombre : ${persona.nombre} Edad : ${persona.edad} Altura : ${persona.altura} </br>`);
+
+        // Crear un Array
+        let frutas = ["Manzana", "Banana","zanahoria"]
+        document.write(frutas.length+"</br>")
+        // 2
+
+        // Acceder a un elemento de Array mediante su índice
+
+        let primero = frutas[0]
+        // Manzana
+
+        let ultimo = frutas[frutas.length - 1]
+        // Banana
+
+        // Recorrer un Array
+
+        frutas.forEach(function(elemento, indice, array) {
+            document.write(elemento, indice+"</br>");
+        })
+        // Manzana 0
+        // Banana 1
+
+
+        // Añadir un elemento al final de un Array
+
+        let nuevaLongitud = frutas.push('Naranja') // Añade "Naranja" al final
+        // ["Manzana", "Banana", "Naranja"]
+
+
+        // Eliminar el último elemento de un Array
+    
+        let ultimoo = frutas.pop() // Elimina "Naranja" del final
+        // ["Manzana", "Banana"]
+
+        // Añadir un elemento al principio de un Array
+
+        let nuevaLongitudd = frutas.unshift('Fresa') // Añade "Fresa" al inicio
+        // ["Fresa" ,"Manzana", "Banana"]
+
+        // Eliminar el primer elemento de un Array
+
+        let primeroo = frutas.shift() // Elimina "Fresa" del inicio
+        // ["Manzana", "Banana"]
+
+
+        // Encontrar el índice de un elemento del Array
+
+        frutas.push('Fresa')
+        // ["Manzana", "Banana", "Fresa"]
+
+        let poss = frutas.indexOf('Banana') // (pos) es la posición para abreviar
+        // 1
+
+
+        // Con .splice() no solo se puede eliminar elementos del array, si no que también podemos 
+        //extraerlos guardándolo en un nuevo array. ¡Ojo! que al hacer esto estaríamos modificando el array de origen.
+        let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
+        document.write(vegetales)
+        // ["Repollo", "Nabo", "Rábano", "Zanahoria"]
+
+        let pos = 1, numElementos = 2
+
+        let elementosEliminados = vegetales.splice(pos, numElementos)
+        // ["Nabo", "Rábano"] ==> Lo que se ha guardado en "elementosEliminados"
+
+        document.write(vegetales+"</br>")
+        // ["Repollo", "Zanahoria"] ==> Lo que actualmente tiene "vegetales" 
+
+
+        // Copiar un Array
+
+        let copiaArray = vegetales.slice();
+        // ["Repollo", "Zanahoria"]; ==> Copiado en "copiaArray"
+
+
+        
+    }
+</script>
+<body>
+    
+</body>
+</html>

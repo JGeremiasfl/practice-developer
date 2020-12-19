@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>METODOS</title>
+</head>
+<script>
+    // no es importante esta linea solo ejecuta el metodo function cuando carga la pagina
+    onload = mi_funcion_main();
+    // creacion de metodo propio donde se ejecutara los ejercicios asignados
+    // metodo principal donde se llamaran a los demas
+    function mi_funcion_main() {
+        //================================== METODOS ===============================
+        // metodo de solo impresion
+        primer_metodo();
+
+        // suma de 2 numeros
+        var numero1 = 5;
+        var numero2 = 7;
+        var resultado = suma_de_numeros(5,7);
+        document.write(resultado+"</br>");
+
+        // metodo de buscar un numero en un array
+        buscar_por_numero(99);
+    }
+
+    function primer_metodo() {
+        document.write("Hola Primer Metodo </br>");
+    }
+
+    function suma_de_numeros(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function buscar_por_numero(numero) {
+        var listDeNumeros = [2,5,7,8,1,3,6,9,23];
+        for (let index = 0; index < listDeNumeros.length; index++) {
+            if (listDeNumeros[index] === numero) {
+                return document.write("valor encontrado = "+listDeNumeros[index] +"</br>");
+            }
+        }
+        return document.write("valor no encontrado !!!");
+    }
+</script>
+<body>
+    
+</body>
+</html>
